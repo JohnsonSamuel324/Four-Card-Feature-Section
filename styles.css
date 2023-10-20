@@ -2,30 +2,92 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    color: hsl(229, 6%, 66%);
 }
 
+/* Global */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98vh;
+    background-color: #fafafa;
 }
-
 main {
     width: 90%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
-}
-
-.page-title {
     text-align: center;
 }
+p {
+    font-size: 15px;
+}
 
+/* Page title & Description */
+.page-title {
+    font-size: .75rem;
+    margin-top: 4rem;
+}
 #reg-title {
     font-weight: 200;
 }
+#bold-title {
+    color: hsl(234, 12%, 34%);
+}
+#page-desc {
+    width: 90%;
+    margin-bottom: 3rem;
+}
 
+/* Four Card Section */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.card-feature {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: #ffffff;
+    border-top: 4px solid hsl(180, 62%, 55%);
+    border-radius: 6px;
+    box-shadow: 10px 10px 18px #d7e1ee;
+    width: 100%;
+}
+.card-feature * {
+    margin: 0 2rem;
+}
+.card-feature h2 {
+    color: hsl(234, 12%, 34%);
+    margin-top: 1.25rem;
+    margin-bottom: .35rem;
+}
+.card-feature p {
+    margin-bottom: 2rem;
+}
+.card-feature img {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+}
+
+/* Team Builder Card */
+#team-card {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+/* Karma Card */
+#karma-card {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+/* Calculator Card */
+#calculator-card {
+    border-top: 4px solid hsl(212, 86%, 64%);
+    margin-bottom: 4rem;
+}
+
+/* Footer */
 .attribution { 
     font-size: 11px; 
     text-align: center; 
@@ -34,4 +96,60 @@ main {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    main {
+        width: 65%;
+    }
+}
+/* Laptop */
+@media (min-width: 1024px) {
+    main {
+        width: 100%;
+    }
+    .page-title {
+        font-size: 1rem;
+        margin-top: 3rem;
+    }
+    #page-desc {
+        width: 55%;
+    }
+    .cards-container {
+        position: relative;
+    }
+    .card-feature {
+        max-width: 55%;
+    }
+    #supervisor-card {
+        position: absolute;
+        left: -13.5rem;
+        top: 30%;
+    }
+    #calculator-card {
+        position: absolute;
+        right: -13.5rem;
+        top: 30%;
+    }
+}
+/* Desktop */
+@media (min-width: 1440px) {
+    #page-desc {
+        max-width: 35%;
+    }
+    .card-feature {
+        max-width: 70%;
+    }
+    .card-feature p {
+        width: 75%;
+    }
+    #supervisor-card {
+        left: -21.5rem;
+        top: 25%;
+    }
+    #calculator-card {
+        right: -21.5rem;
+        top: 25%;
+    }
 }
